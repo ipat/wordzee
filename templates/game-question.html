@@ -1,0 +1,10 @@
+<ion-view title="Question {{score+1}}">
+  <ion-content class="has-header padding">    
+    <div class="center">
+    	<h2>{{question}}</h2>
+    	<a style="margin:5px" class="button button-positive" ng-repeat="choice in choices | orderBy:identity">
+    		{{choice}}
+    	</a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,9 @@
+<ion-view title="Words">
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="(key, data) in words" type="item-text-wrap" href="#/tab/words/{{key}}">
+        {{key}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
