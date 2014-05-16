@@ -1,0 +1,22 @@
+<ion-view title="Chect the answer">
+  <ion-content class="has-header padding">    
+    <div class="center">
+    	<h2>{{question}}</h2>
+    	<h3>
+    		The answer is {{answer}}
+    	</h3>    	
+      <div ng-show="result">
+        <h3>Correct!</h3>
+        <img src="img/correct.png" alt="correct" style="width:200px">
+        <a class="button button-positive" href="#/tab/game/question">Next Question</a>
+      </div>
+      <div ng-hide="result">
+        <h3>Sorry! Incorrect</h3>
+        <img src="img/wrong.png" alt="correct" style="width:200px">
+        <h3>You got</h3>
+        <h1 style="font-size:180%">{{score}}</h1>
+        <a class="button button-positive" href="#/tab/game">Back to the main page</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

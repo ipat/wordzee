@@ -2,9 +2,11 @@
   <ion-content class="has-header padding">    
     <div class="center">
     	<h2>{{question}}</h2>
-    	<a style="margin:5px" class="button button-positive" ng-repeat="choice in choices | orderBy:identity">
-    		{{choice}}
-    	</a>
+    	<div ng-repeat="choice in choices">
+    		<a href="#/tab/game/answer/{{choice}}" style="margin:5px" class="button button-positive" >
+	    		{{choice}}
+	    	</a>
+    	</div>    	
     </div>
   </ion-content>
 </ion-view>
