@@ -1,9 +1,9 @@
 <ion-view title="Question {{score+1}}">
   <ion-content class="has-header padding">    
     <div class="center">
-    	<h2>{{question}}</h2>
-    	<div ng-repeat="choice in choices">
-    		<a href="#/tab/game/answer/{{choice}}" style="margin:5px" class="button button-positive" >
+    	<h2 class="question">{{question}}</h2>
+    	<div >
+    		<a ng-repeat="choice in choices"  class="fullchoice" href="#/tab/game/answer/{{choice}}">
 	    		{{choice}}
 	    	</a>
     	</div>    	

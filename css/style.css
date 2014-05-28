@@ -3,3 +3,86 @@
 	text-align: center;
 	
 }
+
+.fullchoice{
+ 	display: block;
+	margin-right: 0;
+	margin-left: 0;
+	border-right-width: 0;
+	border-left-width: 0;
+	border-radius: 0; 
+	width: 100%;
+	height: 3em;
+	line-height: 3em;
+	text-decoration: none;
+	font-size: 2em;
+	color: black;
+	text-shadow: 0 0 10px white;
+}
+
+.fullchoice>a{
+	width: 100%;
+}
+.fullchoice:nth-of-type(1){
+	/*background-color: #FFA39E;*/
+	background: repeating-linear-gradient(
+	  45deg,
+	  #FFA39E,
+	  #FFA39E 10px,
+	  #FF8A83 10px,
+	  #FF8A83 20px
+	);
+	border-left: 0.5em solid #FF4741;
+}
+
+.fullchoice:nth-of-type(2){
+	/*background-color: #FFD591;*/
+	background: repeating-linear-gradient(
+	  45deg,
+	  #FFD591,
+	  #FFD591 10px,
+	  #FFC86E 10px,
+	  #FFC86E 20px
+	);
+	border-left: 0.5em solid #FFB938;
+
+}
+
+.fullchoice:nth-of-type(3){
+	/*background-color: #98E881;*/
+	background: repeating-linear-gradient(
+	  45deg,
+	  #98E881,
+	  #98E881 10px,
+	  #78E844 10px,
+	  #78E844 20px
+	);
+	border-left: 0.5em solid #78E844;
+}
+
+.fullchoice:nth-of-type(4){
+	/*background-color: #9AE8DE;*/
+	background: repeating-linear-gradient(
+	  45deg,
+	  #9AE8DE,
+	  #9AE8DE 10px,
+	  #50E8C9 10px,
+	  #50E8C9 20px
+	);
+	border-left: 0.5em solid #52E8E5;
+}
+
+.question{
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 28%, #dbdbdb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(28%,#ffffff), color-stop(100%,#dbdbdb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 28%,#dbdbdb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 28%,#dbdbdb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 28%,#dbdbdb 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 28%,#dbdbdb 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+
+	margin: 0;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
