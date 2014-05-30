@@ -1,21 +1,22 @@
 <ion-view hide-back-button="true" title="Chect the answer">
-  <ion-content class="has-header padding">    
+  <ion-content class="has-header">    
     <div class="center">
-    	<h2>{{question}}</h2>
-    	<h3>
-    		The answer is {{answer}}
-    	</h3>    	
-      <div ng-show="result">
-        <h3>Correct!</h3>
-        <img src="img/correct.png" alt="correct" style="width:200px">
-        <a class="button button-positive" href="#/tab/game/question">Next Question</a>
+    	<h3 class="box-set light-yellow under-yellow">{{question}}</h3>
+    	<h3 class="box-set mid-yellow under-yellow" style="float:left; width:50%">The answer is  </h3>
+      <h3 class="box-set strip-yellow under-yellow" style="float:right; width:50%; white-space: nowrap; ">{{answer}} </h3>
+      <h3></h3>    	
+      <div ng-show="result">      
+        <i class="ion-checkmark-round icon-sign icon-green"></i>
+        <h3 class="box-set strip-green" style="width:100%; height:2em; font-size:200%">Correct!</h3>  
+        <a style="text-decoration: none; color:black" href="#/tab/game/question"><div class="strip-blue box-set under-blue" style="width:100%; hegith:2em; font-size:2em">Next Question <i class="ion-chevron-right" style="color:white"></i></div></a>
       </div>
       <div ng-hide="result">
-        <h3>Sorry! Incorrect</h3>
-        <img src="img/wrong.png" alt="correct" style="width:200px">
-        <h3>You got</h3>
-        <h1 style="font-size:180%">{{score}}</h1>
-        <a class="button button-positive" href="#/tab/game">Back to the main page</a>
+        <i class="ion-close-round icon-sign icon-red"></i>
+        <h2 class="strip-red box-set">Sorry! Incorrect</h2>
+        <h3 class="mid-blue box-set under-blue" style="float:left; width:50%; height:2em; font-size:200%">You got</h3>
+        <h3 class="strip-blue box-set under-blue" style="float:right; width:50%; height:2em; font-size:200%">{{score}}</h3>
+        <a href="#/tab/game" style="text-decoration: none; color:black"><div class="strip-green box-set" style="width:100%; clear:both; height:2em;" >Back to the main page <i class="ion-chevron-right" style="color:green"></i></div></a>
+        
       </div>
     </div>
   </ion-content>
