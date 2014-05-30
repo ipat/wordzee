@@ -2,16 +2,20 @@
   <ion-content class="has-header">    
     <div class="center">
     	<h3 class="box-set light-yellow under-yellow">{{question}}</h3>
-    	<h3 class="box-set mid-yellow under-yellow" style="float:left; width:50%">The answer is  </h3>
+    	<h3 class="box-set mid-yellow under-yellow" style="float:left; width:50%">Answer</h3>
       <h3 class="box-set strip-yellow under-yellow" style="float:right; width:50%; white-space: nowrap; ">{{answer}} </h3>
       <h3></h3>    	
       <div ng-show="result">      
-        <i class="ion-checkmark-round icon-sign icon-green"></i>
+        <div style="background-color:#78E844; width:100%">          
+          <i class="ion-checkmark-round icon-sign"></i>
+        </div>
         <h3 class="box-set strip-green" style="width:100%; height:2em; font-size:200%">Correct!</h3>  
         <a style="text-decoration: none; color:black" href="#/tab/game/question"><div class="strip-blue box-set under-blue" style="width:100%; hegith:2em; font-size:2em">Next Question <i class="ion-chevron-right" style="color:white"></i></div></a>
       </div>
       <div ng-hide="result">
-        <i class="ion-close-round icon-sign icon-red"></i>
+        <div style="background-color:#FF8A83; width:100%"> 
+          <i class="ion-close-round icon-sign"></i>
+        </div>
         <h2 class="strip-red box-set">Sorry! Incorrect</h2>
         <h3 class="mid-blue box-set under-blue" style="float:left; width:50%; height:2em; font-size:200%">You got</h3>
         <h3 class="strip-blue box-set under-blue" style="float:right; width:50%; height:2em; font-size:200%">{{score}}</h3>
