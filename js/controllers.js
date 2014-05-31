@@ -1,7 +1,8 @@
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, Words) {
-	$scope.words = Words.all();
+	$scope.words = Words.all();	
+	$scope.highscore = window.localStorage.getItem("HighScore");
 })
 
 .controller('WordsCtrl', function($scope, Words) {
@@ -16,6 +17,7 @@ angular.module('starter.controllers', [])
 .controller('GameCtrl', function($scope, Words, $rootScope) {
 	//$scope.question = Words.getfour();
 	$rootScope.score = 0;
+	$rootScope.highscore = false;
 })
 
 .controller('GameQuestionCtrl', function($scope, Words, $rootScope){
@@ -35,6 +37,15 @@ angular.module('starter.controllers', [])
 	}else {
 		$scope.result = false;
 	}
-	console.log($scope.result);
 
+	var highscore = window.localStorage.getItem("HighScore");
+
+	if((highscore === null || highscore === 'undefined')){
+		window.localStorage.setItem("HighScore", $rootScope.score);
+		$rootScope.highscore = true;
+		console.log("Set Item");
+	} else if(highscore < $rootScope.score){
+		window.localStorage.setItem("HighScore", $rootScope.score);
+		$rootScope.highscore = true;
+	}
 });
