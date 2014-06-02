@@ -2,11 +2,21 @@
   <ion-content class="has-header padding">
     <h1>Welcome</h1>
     <div class="card list">
-    	<div class="item item-divider">
+    	<div class="item item-divider strip-yellow">
     		Game Highscore
     	</div>
     	<div class="item item-text-warp">
-    		Your Highscore is <b>{{highscore}}</b>.
+            <div ng-show="highscore" class="row">
+                
+                <div class="col col-90">Your Highscore is <b>{{highscore}}</b> by <b>{{highscorename}}</b>.</div>
+                <div class="col col-10"><a href="#" class="icon-right" style="color:#EAB911" ng-click="clearHS()">
+                <i class="icon ion-close-circled"></i></div>
+                
+            </a></div>
+    		<div ng-show="highscore==null">No Highscore</div>
+    
+            
+
     	</div>
     </div>
 

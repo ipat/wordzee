@@ -62,8 +62,19 @@ angular.module('starter.services', [])
           }
         }
         return wordReturn;
-        
 
+      },
+      getone: function(){
+        function randomKey() {
+            var ret;
+            var c = 0;
+            for (var key in words)
+                if (Math.random() < 1/++c)
+                   ret = key;
+            return ret;
+        }
+        var temp = randomKey();
+        return temp;
       }
     };
 

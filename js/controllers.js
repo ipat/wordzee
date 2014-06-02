@@ -1,8 +1,25 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic'])
 
-.controller('DashCtrl', function($scope, Words) {
+.controller('DashCtrl', function($scope, Words, $ionicPopup) {
 	$scope.words = Words.all();	
 	$scope.highscore = window.localStorage.getItem("HighScore");
+	$scope.highscorename = window.localStorage.getItem("HighScoreName");
+
+	var eraseHS = document.getElementById('eraseHS');
+
+	$scope.clearHS = function(){
+		var confirmPop = $ionicPopup.confirm({
+			title: 'Clear Highscore',
+			template: 'Do you want to clear highscore?'
+		});
+		confirmPop.then(function(rep){
+			if(rep){
+				window.localStorage.removeItem("HighScore");
+				window.location.reload();
+			}
+		});
+	};
+
 })
 
 .controller('WordsCtrl', function($scope, Words) {
@@ -27,7 +44,7 @@ angular.module('starter.controllers', [])
 	$rootScope.question = question[4];
 })
 
-.controller('GameAnswerCtrl', function($scope, $stateParams, $rootScope) {
+.controller('GameAnswerCtrl', function($scope, $stateParams, $rootScope, $ionicPopup) {
 	console.log($rootScope.answer);
 	console.log($stateParams.ans);
 	//$scope.resule = TRUE if CORRECT!!!
@@ -40,12 +57,24 @@ angular.module('starter.controllers', [])
 
 	var highscore = window.localStorage.getItem("HighScore");
 
-	if((highscore === null || highscore === 'undefined')){
+	if((highscore === null || highscore === 'undefined') && $rootScope.score !== 0){
 		window.localStorage.setItem("HighScore", $rootScope.score);
 		$rootScope.highscore = true;
-		console.log("Set Item");
 	} else if(highscore < $rootScope.score){
 		window.localStorage.setItem("HighScore", $rootScope.score);
 		$rootScope.highscore = true;
+	}
+
+	if($rootScope.highscore === true && $scope.result === false){
+
+		var promptPop = $ionicPopup.prompt({
+			title: 'New Highscore!!! Enter your name',
+			inputType: 'text',
+			inputPlaceholder: 'Your Name'
+		});
+		promptPop.then(function(rep){
+			if(rep === 'undefined' || rep === '') window.localStorage.setItem("HighScoreName", "Anonymous");
+			else window.localStorage.setItem("HighScoreName", rep);
+		});
 	}
 });
