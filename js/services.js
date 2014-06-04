@@ -22,11 +22,12 @@ angular.module('starter.services', [])
       // Simple index lookup
       return friends[friendId];
     }
-  }
+  };
   }).factory('Words', function($http){
     var words;
     var word = $http.get('file/dic-min.json').then(function(response){
       words = response.data;
+      console.log("I'm loading words");
       return response.data;
     });
 

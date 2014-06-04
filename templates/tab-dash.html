@@ -8,16 +8,26 @@
     	<div class="item item-text-warp">
             <div ng-show="highscore" class="row">
                 
-                <div class="col col-90">Your Highscore is <b>{{highscore}}</b> by <b>{{highscorename}}</b>.</div>
+                <div class="col col-90">Your Highscore is <b>{{highscore}}</b><br>By <b>{{highscorename}}</b></div>
                 <div class="col col-10"><a href="#" class="icon-right" style="color:#EAB911" ng-click="clearHS()">
                 <i class="icon ion-close-circled"></i></div>
                 
             </a></div>
-    		<div ng-show="highscore==null">No Highscore</div>
-    
-            
+    		<div ng-show="highscore==null">No Highscore</div>           
 
     	</div>
+    </div>
+
+    <div class="card list" ng-show="word">
+        <div class="item item-divider strip-blue">
+            Suggest Word
+        </div>
+        <div class="item item-text-warp">
+            <div class="row">
+                <div class="col col-90"><b>{{word}}</b>  <hr>  <pre>{{meaning}}</pre></div>
+            </div>
+
+        </div>
     </div>
 
   </ion-content>

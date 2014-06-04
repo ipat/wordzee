@@ -40,6 +40,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           templateUrl: 'templates/tab-dash.html',
           controller: 'DashCtrl'
         }
+      },
+      resolve: {
+        'WordsDate': function(Words){
+            return Words.all;
+        }
       }
     })
 

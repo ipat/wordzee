@@ -1,7 +1,7 @@
 angular.module('starter.controllers', ['ionic'])
 
-.controller('DashCtrl', function($scope, Words, $ionicPopup) {
-	$scope.words = Words.all();	
+.controller('DashCtrl', function($scope, Words, $ionicPopup, $rootScope) {
+	// $scope.words = Words.all();	
 	$scope.highscore = window.localStorage.getItem("HighScore");
 	$scope.highscorename = window.localStorage.getItem("HighScoreName");
 
@@ -20,10 +20,19 @@ angular.module('starter.controllers', ['ionic'])
 		});
 	};
 
+	$scope.word = Words.getone();
+	console.log($scope.word);
+	if(typeof $scope.word !== 'undefined') $scope.meaning = Words.get($scope.word);
+	
+
 })
 
 .controller('WordsCtrl', function($scope, Words) {
-  $scope.words = Words.all();
+	$scope.search = "";
+  	$scope.clearSearch = function(){
+	    $scope.search = '';
+  	};
+  	$scope.words = Object.keys(Words.all()).sort();
 })
 
 .controller('WordDetailCtrl', function($scope, $stateParams, Words) {
@@ -35,6 +44,7 @@ angular.module('starter.controllers', ['ionic'])
 	//$scope.question = Words.getfour();
 	$rootScope.score = 0;
 	$rootScope.highscore = false;
+	$rootScope.putHighscore = false;
 })
 
 .controller('GameQuestionCtrl', function($scope, Words, $rootScope){
@@ -65,8 +75,10 @@ angular.module('starter.controllers', ['ionic'])
 		$rootScope.highscore = true;
 	}
 
-	if($rootScope.highscore === true && $scope.result === false){
 
+
+	if($rootScope.highscore === true && $scope.result === false && $rootScope.putHighscore === false){
+		$rootScope.putHighscore = true;
 		var promptPop = $ionicPopup.prompt({
 			title: 'New Highscore!!! Enter your name',
 			inputType: 'text',
