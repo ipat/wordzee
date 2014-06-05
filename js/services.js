@@ -27,7 +27,6 @@ angular.module('starter.services', [])
     var words;
     var word = $http.get('file/dic-min.json').then(function(response){
       words = response.data;
-      console.log("I'm loading words");
       return response.data;
     });
 

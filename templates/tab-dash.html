@@ -2,7 +2,7 @@
   <ion-content class="has-header padding">
     <h1>Welcome</h1>
     <div class="card list">
-    	<div class="item item-divider strip-yellow">
+    	<div class="item item-divider strip-yellow under-yellow" style="border-left:none">
     		Game Highscore
     	</div>
     	<div class="item item-text-warp">
@@ -19,8 +19,20 @@
     </div>
 
     <div class="card list" ng-show="word">
-        <div class="item item-divider strip-blue">
+        <div class="item item-divider strip-blue under-blue">
             Suggest Word
+        </div>
+        <div class="item item-text-warp">
+            <div class="row">
+                <div class="col col-90"><b>{{word | uppercase}}</b>  <hr>  <pre style="font-family:Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif">{{meaning}}</pre></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="card list" ng-show="word">
+        <div class="item item-divider strip-red">
+            Quote for Life
         </div>
         <div class="item item-text-warp">
             <div class="row">
@@ -28,7 +40,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
   </ion-content>
 </ion-view>

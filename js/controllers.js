@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['ionic'])
 
-.controller('DashCtrl', function($scope, Words, $ionicPopup, $rootScope) {
+.controller('DashCtrl', function($scope, Words, $ionicPopup, $rootScope, $http) {
 	// $scope.words = Words.all();	
 	$scope.highscore = window.localStorage.getItem("HighScore");
 	$scope.highscorename = window.localStorage.getItem("HighScoreName");
@@ -19,6 +19,11 @@ angular.module('starter.controllers', ['ionic'])
 			}
 		});
 	};
+	// var quoteurl = "http://www.iheartquotes.com/api/v1/random?format=json&callback=JSON_CALLBACK";
+	// var quote = $http.jsonp(quoteurl).then(function(result){
+	// 	alert(result);
+	// 	console.log(result);
+	// });
 
 	$scope.word = Words.getone();
 	console.log($scope.word);
