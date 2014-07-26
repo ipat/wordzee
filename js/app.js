@@ -88,6 +88,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('tab.game-sixty', {
+      url: '/game/sixty/:ans',
+      views: {
+        'tab-game': {
+          templateUrl: 'templates/game-sixty.html',
+          controller: 'GameSixtyCtrl'
+        }
+      }
+    })
+
+    .state('tab.game-sixty-answer', {
+      url: '/game/sixty-answer',
+      views: {
+        'tab-game': {
+          templateUrl: 'templates/game-sixty-answer.html',
+          controller: 'GameSixtyAnsCtrl'
+        }
+      }
+    })
+
     .state('tab.game-answer', {
       url: '/game/answer/:ans',
       views: {
@@ -99,6 +119,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+ // $urlRouterProvider.otherwise('/tab/dash');
 });
 

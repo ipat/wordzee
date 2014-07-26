@@ -11,9 +11,10 @@
         </button>
     </div>
     <ion-list>
-      <ion-item ng-repeat="key in words | filter:search | orderBy:'key'" type="item-text-wrap" href="#/tab/words/{{key}}">
+      <ion-item  bindonce ng-repeat="key in words | filter:search | orderBy:'key'" type="item-text-wrap" href="#/tab/words/{{key}}">
         {{key}}
       </ion-item>
     </ion-list>
+    <ion-infinite-scroll  on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
   </ion-content>
 </ion-view>

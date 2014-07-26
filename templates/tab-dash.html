@@ -3,19 +3,40 @@
     <h1>Welcome</h1>
     <div class="card list">
     	<div class="item item-divider strip-yellow under-yellow" style="border-left:none">
-    		Game Highscore
+    		Game Free Mode Highscore
     	</div>
     	<div class="item item-text-warp">
             <div ng-show="highscore" class="row">
                 
-                <div class="col col-90">Your Highscore is <b>{{highscore}}</b><br>By <b>{{highscorename}}</b></div>
-                <div class="col col-10"><a href="#" class="icon-right" style="color:#EAB911" ng-click="clearHS()">
+                <div class="col col-90">Your Free Mode Highscore is <b>{{highscore}}</b><br>By <b>{{highscorename}}</b></div>
+                <div class="col col-10"><a href="#/tab/dash" class="icon-right" style="color:#EAB911" ng-click="clearHS()">
                 <i class="icon ion-close-circled"></i></div>
                 
             </a></div>
-    		<div ng-show="highscore==null">No Highscore</div>           
+    		<div ng-show="highscore==null">No Free Mode Highscore</div>             
 
-    	</div>
+    	   </div>
+        </div>
+    </div>
+    
+    <div class="card list">
+
+        <div class="item item-divider strip-yellow under-yellow" style="border-left:none">
+                Game 60-second Mode Highscore
+            </div>
+            <div class="item item-text-warp">    
+                <div ng-show="highscoreSixty" class="row">
+                    
+                    <div class="col col-90">Your 60-second Mode Highscore is <b>{{highscoreSixty}}</b><br>By <b>{{highscorenameSixty}}</b></div>
+                    <div class="col col-10"><a href="#/tab/dash" class="icon-right" style="color:#EAB911" ng-click="clearHSSixty()">
+                    <i class="icon ion-close-circled"></i></div>
+                    
+                </a></div>
+                <div ng-show="highscoreSixty==null">No 60-second Mode Highscore</div>           
+
+                </div>
+            </div>        
+            
     </div>
 
     <div class="card list" ng-show="word">

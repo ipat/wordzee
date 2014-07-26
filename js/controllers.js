@@ -4,17 +4,34 @@ angular.module('starter.controllers', ['ionic'])
 	// $scope.words = Words.all();	
 	$scope.highscore = window.localStorage.getItem("HighScore");
 	$scope.highscorename = window.localStorage.getItem("HighScoreName");
+	$scope.highscoreSixty = window.localStorage.getItem("HighScoreSixty");
+	$scope.highscorenameSixty = window.localStorage.getItem("HighScoreSixtyName");
 
 	var eraseHS = document.getElementById('eraseHS');
 
 	$scope.clearHS = function(){
 		var confirmPop = $ionicPopup.confirm({
 			title: 'Clear Highscore',
-			template: 'Do you want to clear highscore?'
+			template: 'Do you want to clear free mode highscore?'
 		});
 		confirmPop.then(function(rep){
 			if(rep){
 				window.localStorage.removeItem("HighScore");
+				window.location.reload();
+			}
+		});
+	};
+
+	var eraseHS = document.getElementById('eraseHSSixty');
+
+	$scope.clearHSSixty = function(){
+		var confirmPop = $ionicPopup.confirm({
+			title: 'Clear Highscore',
+			template: 'Do you want to clear 60-second mode highscore?'
+		});
+		confirmPop.then(function(rep){
+			if(rep){
+				window.localStorage.removeItem("HighScoreSixty");
 				window.location.reload();
 			}
 		});
@@ -37,7 +54,23 @@ angular.module('starter.controllers', ['ionic'])
   	$scope.clearSearch = function(){
 	    $scope.search = '';
   	};
-  	$scope.words = Object.keys(Words.all()).sort();
+  	words = Object.keys(Words.all()).sort();
+  	$scope.words = [];
+  	for (var i = 0; i <= 100; i++) {
+  		$scope.words.push(words[i]);
+  		// console.log(words[Object.keys(words)[i]]);
+  	}
+  	// console.log(words);
+
+  	$scope.loadMore = function(){
+  		var l = $scope.words.length;
+
+  		for (var i = l; i < l + 100; i ++) {
+  			$scope.words.push(words[i]);
+  		}
+
+    	$scope.$broadcast('scroll.infiniteScrollComplete');
+  	};
 })
 
 .controller('WordDetailCtrl', function($scope, $stateParams, Words) {
@@ -45,11 +78,13 @@ angular.module('starter.controllers', ['ionic'])
   				  'data' : Words.get($stateParams.key)};
 })
 
-.controller('GameCtrl', function($scope, Words, $rootScope) {
+.controller('GameCtrl', function($scope, Words, $rootScope, $timeout) {
 	//$scope.question = Words.getfour();
 	$rootScope.score = 0;
 	$rootScope.highscore = false;
 	$rootScope.putHighscore = false;
+	$rootScope.counttime = 0;
+	$timeout.cancel($rootScope.stopwatch);
 })
 
 .controller('GameQuestionCtrl', function($scope, Words, $rootScope){
@@ -57,11 +92,10 @@ angular.module('starter.controllers', ['ionic'])
 	$rootScope.answer = question[3];
 	$scope.choices = question.slice(0, 4).sort();
 	$rootScope.question = question[4];
+	
 })
 
 .controller('GameAnswerCtrl', function($scope, $stateParams, $rootScope, $ionicPopup) {
-	console.log($rootScope.answer);
-	console.log($stateParams.ans);
 	//$scope.resule = TRUE if CORRECT!!!
 	if($rootScope.answer === $stateParams.ans){
 		$scope.result = true;
@@ -94,4 +128,73 @@ angular.module('starter.controllers', ['ionic'])
 			else window.localStorage.setItem("HighScoreName", rep);
 		});
 	}
-});
+
+
+})
+
+.controller('GameSixtyCtrl', function($scope, $stateParams, $rootScope, Words, $timeout, $location){
+ 	$timeout.cancel($rootScope.stopwatch);
+ 	var countup = function(){
+ 		$rootScope.stopwatch = $timeout(function(){
+ 			if($rootScope.counttime > 60){
+		 		$location.path('tab/game/sixty-answer');
+		 	}
+ 			else {
+ 				$rootScope.counttime ++;
+ 				countup();
+ 			}
+ 		}, 100);
+ 	};
+ 	countup();
+
+ 	if($stateParams.ans == 0) {
+ 		var question = Words.getfour();
+		$rootScope.answer = question[3];
+		$scope.choices = question.slice(0, 4).sort();
+		$rootScope.question = question[4];
+ 	} else if($stateParams.ans == $rootScope.answer) {
+ 		$('#correct').show().fadeOut('normal');
+    	$rootScope.score += 1;
+    	var question = Words.getfour();
+		$rootScope.answer = question[3];
+		$scope.choices = question.slice(0, 4).sort();
+		$rootScope.question = question[4];    	
+		console.log('correct');
+ 	} else if($stateParams.ans != $rootScope.answer) {
+ 		$('#incorrect').show().fadeOut('normal');
+    	var question = Words.getfour();
+		$rootScope.answer = question[3];
+		$scope.choices = question.slice(0, 4).sort();
+		$rootScope.question = question[4];  
+		console.log('incorrect');
+ 	}
+ })
+
+ .controller('GameSixtyAnsCtrl', function($scope, $rootScope, $ionicPopup){
+ 	
+ 	var highscore = window.localStorage.getItem("HighScoreSixty");
+
+	if((highscore === null || highscore === 'undefined') && $rootScope.score !== 0){
+		window.localStorage.setItem("HighScoreSixty", $rootScope.score);
+		$rootScope.highscore = true;
+	} else if(highscore < $rootScope.score){
+		window.localStorage.setItem("HighScoreSixty", $rootScope.score);
+		$rootScope.highscore = true;
+	}
+
+
+
+	if($rootScope.highscore === true && $rootScope.putHighscore === false){
+		$rootScope.putHighscore = true;
+		var promptPop = $ionicPopup.prompt({
+			title: 'New Highscore!!! Enter your name',
+			inputType: 'text',
+			inputPlaceholder: 'Your Name'
+		});
+		promptPop.then(function(rep){
+			if(rep === 'undefined' || rep === '') window.localStorage.setItem("HighScoreSixtyName", "Anonymous");
+			else window.localStorage.setItem("HighScoreSixtyName", rep);
+		});
+	}
+ 	//console.log()
+ });

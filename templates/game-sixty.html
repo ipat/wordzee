@@ -1,0 +1,19 @@
+<ion-view hide-back-button="true" has-tabs="false" title="Score {{score}}">
+  <ion-content class="has-header">    
+    <div class="center">
+    	<h2 class="question relative">{{question}}</h2>  
+      <h2 id="incorrect" class="question mark-result absolute" style="background:rgba(236, 15, 15, 0.5);display:none">_</h2>
+      <h2 id="correct" class="question mark-result absolute" style="background:rgba(140, 228, 12, 0.5);display:none"> _</h2>
+      <div id="progressbar">
+        <div style="width:{{100-counttime/6}}%"></div>
+        <span style="width:20%">{{60-counttime/10}} seconds</span>
+      </div>      
+    	<div >
+    		<a ng-repeat="choice in choices"  class="fullchoice" href="#/tab/game/sixty/{{choice}}">
+	    		{{choice}}
+	    	</a>
+        {{counttime}}
+    	</div>    	
+    </div>
+  </ion-content>
+</ion-view>
