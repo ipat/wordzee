@@ -136,16 +136,18 @@ angular.module('starter.controllers', ['ionic'])
  	$timeout.cancel($rootScope.stopwatch);
  	var countup = function(){
  		$rootScope.stopwatch = $timeout(function(){
- 			if($rootScope.counttime > 60){
+ 			if($rootScope.counttime > 600){
 		 		$location.path('tab/game/sixty-answer');
 		 	}
  			else {
  				$rootScope.counttime ++;
  				countup();
+ 				$scope.second = parseInt(60-$rootScope.counttime/10);
  			}
  		}, 100);
  	};
  	countup();
+ 	//$scope.second = parseInt(60-$rootScope.counttime/10);
 
  	if($stateParams.ans == 0) {
  		var question = Words.getfour();
