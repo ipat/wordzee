@@ -1,7 +1,83 @@
-<ion-view title="Dashboard" class="ColorBG">
-  <ion-content class="has-header padding">
-    <h1>Welcome</h1>
-    <div class="card list">
+<ion-view title="Welcome" class="ColorBG">
+  <ion-content class="has-header">
+
+    <!-- ====================== Free Mode Hightscore Display ======================== -->
+    <div class="green-box title-text thin-font height-75 align-center float-left" style="width:10%; border:none;">
+      <i class="ion-trophy"></i>
+    </div>
+    <div class="green-box title-text thin-font height-75 align-left float-left" style="width:70%; border:none;">
+      Free Mode Highscore
+    </div>
+
+    <div ng-show="highscore" class="green-box huge-text thin-font height-150 align-center float-right icon-shadow-green" style="width:20%;  padding:0">
+      {{highscore}}
+    </div>
+
+    <div ng-show="highscore == null" class="green-box huge-text thin-font height-150 align-center float-right icon-shadow-green" style="width:20%;  padding:0">
+      0
+    </div>
+
+    <div ng-show="highscore" class="green-box-alpha title-text  height-75 align-left float-left" style="width:80%; color:black;">
+      {{highscorename}}
+        <a href="#/tab/dash" class="align-right" style="text-decoration:none; color:black; font-size: 0.8em" ng-click="clearHS()">
+                <i class="icon ion-close-circled"></i>
+        </a>
+    </div>
+    <div ng-show="highscore == null" class="green-box-alpha title-text thin-font height-75 align-left float-left" style="width:80%; color:black;">
+      No Free Mode Highscore
+    </div>
+
+    <!-- ============================= End Free Mode Highscore Display ============================== -->
+
+    <!-- ============================= 60 secs Mode Highscore Display =============================== -->
+
+    <div class="blue-box title-text thin-font height-75 align-center float-left" style="width:10%; border:none;">
+      <i class="ion-ribbon-a"></i>
+    </div>
+    <div class="blue-box title-text thin-font height-75 align-left float-left" style="width:70%; border:none;">
+      60 secs Mode Highscore
+    </div>
+
+    <div ng-show="highscore" class="blue-box huge-text thin-font height-150 align-center float-right icon-shadow-blue" style="width:20%;  padding:0">
+      {{highscoreSixty}}
+    </div>
+
+    <div ng-show="highscore == null" class="blue-box huge-text thin-font height-150 align-center float-right icon-shadow-blue" style="width:20%;  padding:0">
+      0
+    </div>
+
+    <div ng-show="highscore" class="blue-box-alpha title-text  height-75 align-left float-left" style="width:80%; color:black;">
+      {{highscorenameSixty}}
+        <a href="#/tab/dash" class="align-right" style="text-decoration:none; color:black; font-size: 0.8em" ng-click="clearHSSixty()">
+                <i class="icon ion-close-circled"></i>
+        </a>
+    </div>
+    <div ng-show="highscore == null" class="blue-box-alpha title-text thin-font height-75 align-left float-left" style="width:80%; color:black;">
+      No 60 secs Mode Highscore
+    </div>
+
+    <!-- ============================= End 60 secs Mode Highscore Display =============================== -->
+
+    <!-- ============================= Suggested Word =============================== -->
+
+    <div  ng-show="word" class="yellow-box title-text thin-font height-75 align-left float-left" style="width:10%; border:none;">
+      <i class="ion-radio-waves"></i>
+    </div>
+    <div  ng-show="word" class="yellow-box title-text thin-font height-75 align-left float-left" style="width:90%; border:none;">
+      Suggested Word
+    </div>
+
+    <div ng-show="word" class="yellow-box medium-text thin-font height-75 align-center float-left icon-shadow-yellow" style="width:50%;  padding:0; font-size:2.2em;">
+      {{word | uppercase}}
+    </div>
+
+    <div ng-show="word" class="yellow-box-alpha title-text  height-75 align-center float-right" style="width:50%; color:black; font-size:1.7em">
+      {{meaning}}
+    </div>
+
+    <!-- ============================= End Suggested Word =============================== -->
+
+   <!--  <div class="card list">
     	<div class="item item-divider strip-yellow under-yellow" style="border-left:none">
     		Game Free Mode Highscore
     	</div>
@@ -17,9 +93,9 @@
 
     	   </div>
         </div>
-    </div>
+    </div> -->
     
-    <div class="card list">
+    <!-- <div class="card list">
 
         <div class="item item-divider strip-yellow under-yellow" style="border-left:none">
                 Game 60-second Mode Highscore
@@ -37,9 +113,9 @@
                 </div>
             </div>        
             
-    </div>
+    </div> -->
 
-    <div class="card list" ng-show="word">
+  <!--   <div class="card list" ng-show="word">
         <div class="item item-divider strip-blue under-blue">
             Suggest Word
         </div>
@@ -49,7 +125,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
     <!-- <div class="card list" ng-show="word">
         <div class="item item-divider strip-red">
