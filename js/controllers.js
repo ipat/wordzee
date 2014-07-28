@@ -12,7 +12,7 @@ angular.module('starter.controllers', ['ionic'])
 	$scope.clearHS = function(){
 		var confirmPop = $ionicPopup.confirm({
 			title: 'Clear Highscore',
-			template: 'Do you want to clear free mode highscore?'
+			template: 'Do you want to clear Free Mode highscore?'
 		});
 		confirmPop.then(function(rep){
 			if(rep){
@@ -27,7 +27,7 @@ angular.module('starter.controllers', ['ionic'])
 	$scope.clearHSSixty = function(){
 		var confirmPop = $ionicPopup.confirm({
 			title: 'Clear Highscore',
-			template: 'Do you want to clear 60-second mode highscore?'
+			template: 'Do you want to clear 60 Seconds Mode highscore?'
 		});
 		confirmPop.then(function(rep){
 			if(rep){
@@ -47,6 +47,10 @@ angular.module('starter.controllers', ['ionic'])
 	if(typeof $scope.word !== 'undefined') $scope.meaning = Words.get($scope.word);
 	
 
+})
+
+.controller('AboutCtrl', function($scope) {
+	
 })
 
 .controller('WordsCtrl', function($scope, Words) {
