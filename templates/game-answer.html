@@ -1,34 +1,39 @@
-<ion-view hide-back-button="true" title="Chect the answer">
+<ion-view hide-back-button="true" title="Check the answer" class="ColorBG-bottom">
   <ion-content class="has-header">    
     <div class="center">
-    	<h3 class="box-set light-yellow under-yellow">{{question}}</h3>
-    	<h3 class="box-set mid-yellow under-yellow" style="float:left; width:50%">Answer</h3>
-      <h3 class="box-set strip-yellow under-yellow" style="float:right; width:50%; white-space: nowrap; ">{{answer}} </h3>
-      <h3></h3>    	
+    	<h3 class="box-set yellow-box" style="float:left; width:50%; white-space: nowrap; ">{{question}}</h3>
+      <h3 class="box-set yellow-box-alpha" style="float:right; width:50%; white-space: nowrap; ">{{answer}} </h3>
+      <div class="clear"></div>
       <div ng-show="result">   <!-- Correct Section -->
-        <div style="background-color:#78E844; width:100%">          
-          <i class="ion-checkmark-round icon-sign"></i>
-        </div>
-        <h3 class="box-set strip-green" style="width:100%; height:2em; font-size:200%">Correct!</h3>  
-        <a style="text-decoration: none; color:black" href="#/tab/game/question"><div class="strip-blue box-set under-blue" style="width:100%; hegith:2em; font-size:2em">Next Question <i class="ion-chevron-right" style="color:white"></i></div></a>
+        <div class="green-box" style="width:100%; padding-top: 1em">          
+          <span class="huge-text thin-font green-text-shadow" style="">Correct</span>
+          <i class="ion-checkmark icon-shadow-green" style="font-size: 120px; line-height:100px; padding:0"></i>
+        </div> 
+        <a style="text-decoration: none; color:white; padding-top: 1em" class="blue-box" href="#/tab/game/question">
+          <div class="blue-text-shadow medium-text blue-box height-75" style="width:100%;">Next Question <i class="ion-chevron-right" style="color:white"></i>
+          </div>
+        </a>
       </div>   <!-- End Correct -->
       <div ng-hide="result">   <!-- Incorrect Section -->
         <div ng-hide="highscore"> <!-- Not New HighScore -->
-            <div style="background-color:#FF8A83; width:100%"> 
-              <i class="ion-close-round icon-sign"></i>
-            </div>            
-            <h2 class="strip-red box-set">Sorry! Incorrect</h2>
+            <div class="red-box" style="width:100%; padding-top: 1em">          
+              <span class="huge-text thin-font red-text-shadow" style="">Incorrect</span>
+              <i class="ion-close icon-shadow-red" style="font-size: 120px; line-height:100px; padding:0"></i>
+            </div> 
         </div>    
         <div ng-show="highscore"> <!-- Not New HighScore -->
-            <div style="background-color:#001AFD; width:100%"> 
-              <i class="ion-ios7-paperplane icon-sign"></i>
-            </div>            
-            <h2 class="strip-dark-blue box-set" style="color:white">New Highscore</h2>
+            <div class="blue-box" style="width:100%; padding-top: 1em">          
+              <span class="huge-text thin-font blue-text-shadow" style="">New Highscore</span>
+              <i class="ion-trophy icon-shadow-blue" style="font-size: 120px; line-height:100px; padding:0"></i>
+            </div> 
         </div>   
         
-        <h3 class="mid-blue box-set under-blue" style="float:left; width:50%; height:2em; font-size:200%">You got</h3>
-        <h3 class="strip-blue box-set under-blue" style="float:right; width:50%; height:2em; font-size:200%">{{score}}</h3>
-        <a href="#/tab/game" style="text-decoration: none; color:black"><div class="strip-green box-set" style="width:100%; clear:both; height:2em;" >Back to the main page <i class="ion-chevron-right" style="color:green"></i></div></a>
+        <h3 class="blue-box blue-text-shadow float-left title-text" style="height:50px; line-height:50px; width:50%; padding:0; margin:0; color:white">Score</h3>
+        <h3 class="blue-box-alpha blue-text-shadow float-right title-text" style="height:50px; line-height:50px; width:50%; padding:0; margin:0;">{{score}}</h3>
+        <a href="#/tab/game" style="text-decoration: none; color:white">
+          <div class="green-box green-text-shadow title-text" style="width:100%; height:50px; line-height:50px;  clear:both; padding:0; margin:0;" >Back To Game Page <i class="ion-chevron-right"></i>
+          </div>
+        </a>
         
       </div>   <!-- End Incorrect -->
     </div>

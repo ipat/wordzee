@@ -1,10 +1,26 @@
-<ion-view hide-back-button="true" title="Chect the answer">
+<ion-view hide-back-button="true" title="Chect the answer" class="ColorBG-bottom">
   <ion-content class="has-header">    
     <div class="center">
     	
-        <h3 class="mid-blue box-set under-blue" style="float:left; width:50%; height:2em; font-size:200%">You got</h3>
-        <h3 class="strip-blue box-set under-blue" style="float:right; width:50%; height:2em; font-size:200%">{{score}}</h3>
-        <a href="#/tab/game" style="text-decoration: none; color:black"><div class="strip-green box-set" style="width:100%; clear:both; height:2em;" >Back to the main page <i class="ion-chevron-right" style="color:green"></i></div></a>
+        <div ng-hide="highscore"> <!-- Not New HighScore -->
+            <div class="red-box" style="width:100%; padding-top: 1em">          
+              <span class="huge-text thin-font red-text-shadow" style="">Time's Up!</span>
+              <i class="ion-ios7-stopwatch icon-shadow-red" style="font-size: 120px; line-height:100px; padding:0"></i>
+            </div> 
+        </div>    
+        <div ng-show="highscore"> <!-- New HighScore -->
+            <div class="yellow-box" style="width:100%; padding-top: 1em">          
+              <span class="huge-text thin-font yellow-text-shadow" style="">New Highscore</span>
+              <i class="ion-ribbon-a icon-shadow-yellow" style="font-size: 120px; line-height:100px; padding:0"></i>
+            </div> 
+        </div>   
+        
+        <h3 class="blue-box blue-text-shadow float-left title-text" style="height:50px; line-height:50px; width:50%; padding:0; margin:0; color:white">Score</h3>
+        <h3 class="blue-box-alpha blue-text-shadow float-right title-text" style="height:50px; line-height:50px; width:50%; padding:0; margin:0;">{{score}}</h3>
+        <a href="#/tab/game" style="text-decoration: none; color:white">
+          <div class="green-box green-text-shadow title-text" style="width:100%; height:50px; line-height:50px;  clear:both; padding:0; margin:0;" >Back To Game Page <i class="ion-chevron-right"></i>
+          </div>
+        </a>
         
       </div>   <!-- End Incorrect -->
     </div>

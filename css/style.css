@@ -57,64 +57,216 @@
 	width: 100%;
 }
 .fullchoice:nth-of-type(1){
-	/*background-color: #FFA39E;*/
-	background: repeating-linear-gradient(
+	/*background: repeating-linear-gradient(
 	  45deg,
 	  #FFA39E,
 	  #FFA39E 10px,
 	  #FF8A83 10px,
 	  #FF8A83 20px
-	);
-	border-left: 0.5em solid #FF4741;
+	);*/
+	/*border-left: 0.5em solid #FF4741;*/
+    background-color: rgba(254, 95, 95, 0.5);
+    border-bottom: 5px solid rgba(254, 46, 46, 0.5);
 }
+
+.fullchoice:nth-of-type(1) > .choice-name:before{
+    content: "A";
+}
+
+.fullchoice:nth-of-type(1) > .choice-name{
+    background-color: rgba(254, 95, 95, 1);
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    /*background-color: #3498db; /* teal */*/
+    /*height: 150px;*/
+    /*width: 150px;*/
+    font-size: 100px;
+    /*line-height: 150px;*/
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    text-shadow: rgba(254, 46, 46, 1) 1px 1px,
+    rgba(254, 46, 46, 1) 2px 2px,
+    rgba(254, 46, 46, 1) 3px 3px,
+    rgba(254, 46, 46, 1) 4px 4px,
+    rgba(254, 46, 46, 1) 5px 5px,
+    rgba(254, 46, 46, 1) 6px 6px,
+    rgba(254, 46, 46, 1) 7px 7px,
+    rgba(254, 46, 46, 1) 8px 8px,
+    rgba(254, 46, 46, 1) 9px 9px,
+    rgba(254, 46, 46, 1) 10px 10px,
+    rgba(254, 46, 46, 1) 11px 11px,
+    rgba(254, 46, 46, 1) 12px 12px,
+    rgba(254, 46, 46, 1) 13px 13px,
+    rgba(254, 46, 46, 1) 14px 14px,
+    rgba(254, 46, 46, 1) 15px 15px,
+    rgba(254, 46, 46, 1) 16px 16px,
+    rgba(254, 46, 46, 1) 17px 17px,
+    rgba(254, 46, 46, 1) 18px 18px,
+    rgba(254, 46, 46, 1) 19px 19px,
+    rgba(254, 46, 46, 1) 20px 20px,
+    rgba(254, 46, 46, 1) 21px 21px,
+    rgba(254, 46, 46, 1) 22px 22px,
+    rgba(254, 46, 46, 1) 23px 23px,
+    rgba(254, 46, 46, 1) 24px 24px,
+    rgba(254, 46, 46, 1) 25px 25px,
+    rgba(254, 46, 46, 1) 26px 26px,
+    rgba(254, 46, 46, 1) 27px 27px,
+    rgba(254, 46, 46, 1) 28px 28px,
+    rgba(254, 46, 46, 1) 29px 29px,
+    rgba(254, 46, 46, 1) 30px 30px,
+    rgba(254, 46, 46, 1) 31px 31px,
+    rgba(254, 46, 46, 1) 32px 32px,
+    rgba(254, 46, 46, 1) 33px 33px,
+    rgba(254, 46, 46, 1) 34px 34px,
+    rgba(254, 46, 46, 1) 35px 35px,
+    rgba(254, 46, 46, 1) 36px 36px,
+    rgba(254, 46, 46, 1) 37px 37px,
+    rgba(254, 46, 46, 1) 38px 38px,
+    rgba(254, 46, 46, 1) 39px 39px,
+    rgba(254, 46, 46, 1) 40px 40px,
+    rgba(254, 46, 46, 1) 41px 41px,
+    rgba(254, 46, 46, 1) 42px 42px,
+    rgba(254, 46, 46, 1) 43px 43px,
+    rgba(254, 46, 46, 1) 44px 44px,
+    rgba(254, 46, 46, 1) 45px 45px,
+    rgba(254, 46, 46, 1) 46px 46px,
+    rgba(254, 46, 46, 1) 47px 47px,
+    rgba(254, 46, 46, 1) 48px 48px,
+    rgba(254, 46, 46, 1) 49px 49px,
+    rgba(254, 46, 46, 1) 50px 50px,
+    rgba(254, 46, 46, 1) 51px 51px,
+    rgba(254, 46, 46, 1) 52px 52px,
+    rgba(254, 46, 46, 1) 53px 53px,
+    rgba(254, 46, 46, 1) 54px 54px,
+    rgba(254, 46, 46, 1) 55px 55px,
+    rgba(254, 46, 46, 1) 56px 56px,
+    rgba(254, 46, 46, 1) 57px 57px,
+    rgba(254, 46, 46, 1) 58px 58px,
+    rgba(254, 46, 46, 1) 59px 59px,
+    rgba(254, 46, 46, 1) 60px 60px,
+    rgba(254, 46, 46, 1) 61px 61px,
+    rgba(254, 46, 46, 1) 62px 62px,
+    rgba(254, 46, 46, 1) 63px 63px,
+    rgba(254, 46, 46, 1) 64px 64px,
+    rgba(254, 46, 46, 1) 65px 65px,
+    rgba(254, 46, 46, 1) 66px 66px,
+    rgba(254, 46, 46, 1) 67px 67px,
+    rgba(254, 46, 46, 1) 68px 68px,
+    rgba(254, 46, 46, 1) 69px 69px,
+    rgba(254, 46, 46, 1) 70px 70px,
+    rgba(254, 46, 46, 1) 71px 71px,
+    rgba(254, 46, 46, 1) 72px 72px,
+    rgba(254, 46, 46, 1) 73px 73px,
+    rgba(254, 46, 46, 1) 74px 74px,
+    rgba(254, 46, 46, 1) 75px 75px,
+    rgba(254, 46, 46, 1) 76px 76px,
+    rgba(254, 46, 46, 1) 77px 77px,
+    rgba(254, 46, 46, 1) 78px 78px,
+    rgba(254, 46, 46, 1) 79px 79px,
+    rgba(254, 46, 46, 1) 80px 80px,
+    rgba(254, 46, 46, 1) 81px 81px,
+    rgba(254, 46, 46, 1) 82px 82px,
+    rgba(254, 46, 46, 1) 83px 83px,
+    rgba(254, 46, 46, 1) 84px 84px,
+    rgba(254, 46, 46, 1) 85px 85px,
+    rgba(254, 46, 46, 1) 86px 86px,
+    rgba(254, 46, 46, 1) 87px 87px,
+    rgba(254, 46, 46, 1) 88px 88px,
+    rgba(254, 46, 46, 1) 89px 89px,
+    rgba(254, 46, 46, 1) 90px 90px,
+    rgba(254, 46, 46, 1) 91px 91px,
+    rgba(254, 46, 46, 1) 92px 92px,
+    rgba(254, 46, 46, 1) 93px 93px,
+    rgba(254, 46, 46, 1) 94px 94px,
+    rgba(254, 46, 46, 1) 95px 95px,
+    rgba(254, 46, 46, 1) 96px 96px,
+    rgba(254, 46, 46, 1) 97px 97px,
+    rgba(254, 46, 46, 1) 98px 98px,
+    rgba(254, 46, 46, 1) 99px 99px,
+    rgba(254, 46, 46, 1) 100px 100px;
+}
+
+
 
 .fullchoice:nth-of-type(2){
-	/*background-color: #FFD591;*/
-	background: repeating-linear-gradient(
-	  45deg,
-	  #FFD591,
-	  #FFD591 10px,
-	  #FFC86E 10px,
-	  #FFC86E 20px
-	);
-	border-left: 0.5em solid #FFB938;
+    /*background-color: #FFD591;*/
+    /*background: repeating-linear-gradient(
+      45deg,
+      #FFD591,
+      #FFD591 10px,
+      #FFC86E 10px,
+      #FFC86E 20px
+    );*/
+    background-color: rgba(241, 196, 15,0.5);
+    border-bottom: 5px solid rgba(243, 156, 18,0.5);
 
 }
+
+.fullchoice:nth-of-type(2) > .choice-name:before{
+    content: "B";
+}
+
+.fullchoice:nth-of-type(2) > .choice-name{
+    background-color: rgba(241, 196, 15,1);
+}
+
 
 .fullchoice:nth-of-type(3){
 	/*background-color: #98E881;*/
-	background: repeating-linear-gradient(
+	/*background: repeating-linear-gradient(
 	  45deg,
 	  #98E881,
 	  #98E881 10px,
 	  #78E844 10px,
 	  #78E844 20px
-	);
-	border-left: 0.5em solid #78E844;
+	);*/
+	background-color: rgba(46, 204, 113,0.5);
+    border-bottom: 5px solid rgba(39, 174, 96,0.5);
+}
+
+.fullchoice:nth-of-type(3) > .choice-name:before{
+    content: "C";
+}
+
+.fullchoice:nth-of-type(3) > .choice-name{
+    background-color: rgba(46, 204, 113,1);
 }
 
 .fullchoice:nth-of-type(4){
 	/*background-color: #9AE8DE;*/
-	background: repeating-linear-gradient(
+	/*background: repeating-linear-gradient(
 	  45deg,
 	  #9AE8DE,
 	  #9AE8DE 10px,
 	  #50E8C9 10px,
 	  #50E8C9 20px
-	);
-	border-left: 0.5em solid #52E8E5;
+	);*/
+	background-color: rgba(52, 152, 219,0.5);
+    border-bottom: 5px solid rgba(41, 128, 185,0.5);
+}
+
+.fullchoice:nth-of-type(4) > .choice-name:before{
+    content: "D";
+}
+
+.fullchoice:nth-of-type(4) > .choice-name{
+    background-color: rgba(52, 152, 219,1);
 }
 
 .question{
-	background: rgb(255,255,255); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 17%, rgba(201,201,201,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(17%,rgba(255,255,255,1)), color-stop(100%,rgba(201,201,201,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
+	/*background: rgb(255,255,255); 
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 17%, rgba(201,201,201,1) 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(17%,rgba(255,255,255,1)), color-stop(100%,rgba(201,201,201,1))); 
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); 
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); 
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); 
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 17%,rgba(201,201,201,1) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9',GradientType=0 ); */
 	/*margin-top: 0.2em !important;*/
+    background-color: rgba(236, 240, 241, 0.7);
+    border-bottom: 5px solid rgba(189, 195, 199, 0.7);
 	padding: 0.3em 0.1em 0.3em 0.1em;
 	margin-bottom: 0;
 }
@@ -377,44 +529,15 @@
 	text-align: left;
 }
 
-hr.fancy-line { 
-    border: 0; 
-    height: 2px;
 
-}
-hr.fancy-line:before {
-    top: -5em;
-    height: 1em;
-}
-hr.fancy-line:after {
-    content:'';
-    height: 0.5em;
-    top: 1px;
-}
 
-hr.fancy-line:before, hr.fancy-line:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-}
-
-hr.fancy-line, hr.fancy-line:before {
-    background: radial-gradient(ellipse at left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%);
-}
-
-/*body, hr.fancy-line:after {
-    background: #f4f4f4;
-}*/
-
-.icon-shadow-blue {
+.fullchoice:nth-of-type(4) > .choice-name, .icon-shadow-blue {
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
     font-weight: bold;
     color: #fff;
     /*background-color: #3498db; /* teal */*/
     /*height: 150px;*/
     /*width: 150px;*/
-    font-size: 100px;
-    line-height: 150px;
     text-align: center;
     display: block;
     overflow: hidden;
@@ -521,15 +644,10 @@ hr.fancy-line, hr.fancy-line:before {
     #2980b9 100px 100px;
 }
 
-.icon-shadow-green {
+.fullchoice:nth-of-type(3) > .choice-name, .icon-shadow-green {
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
     font-weight: bold;
     color: #fff;
-    /*background-color: #3498db; /* teal */*/
-    /*height: 150px;*/
-    /*width: 150px;*/
-    font-size: 100px;
-    line-height: 150px;
     text-align: center;
     display: block;
     overflow: hidden;
@@ -636,7 +754,7 @@ hr.fancy-line, hr.fancy-line:before {
     #27ae60 100px 100px;
 }
 
-.icon-shadow-yellow {
+.fullchoice:nth-of-type(2) > .choice-name, .icon-shadow-yellow {
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
     font-weight: bold;
     color: #fff;
@@ -751,6 +869,121 @@ hr.fancy-line, hr.fancy-line:before {
     #f39c12 100px 100px;
 }
 
+.icon-shadow-red {
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    /*background-color: #3498db; /* teal */*/
+    /*height: 150px;*/
+    /*width: 150px;*//*
+    font-size: 100px;
+    line-height: 150px;*/
+    text-align: center;
+    display: block;
+    overflow: hidden;
+
+    text-shadow: #c0392b 1px 1px,
+    #c0392b 2px 2px,
+    #c0392b 3px 3px,
+    #c0392b 4px 4px,
+    #c0392b 5px 5px,
+    #c0392b 6px 6px,
+    #c0392b 7px 7px,
+    #c0392b 8px 8px,
+    #c0392b 9px 9px,
+    #c0392b 10px 10px,
+    #c0392b 11px 11px,
+    #c0392b 12px 12px,
+    #c0392b 13px 13px,
+    #c0392b 14px 14px,
+    #c0392b 15px 15px,
+    #c0392b 16px 16px,
+    #c0392b 17px 17px,
+    #c0392b 18px 18px,
+    #c0392b 19px 19px,
+    #c0392b 20px 20px,
+    #c0392b 21px 21px,
+    #c0392b 22px 22px,
+    #c0392b 23px 23px,
+    #c0392b 24px 24px,
+    #c0392b 25px 25px,
+    #c0392b 26px 26px,
+    #c0392b 27px 27px,
+    #c0392b 28px 28px,
+    #c0392b 29px 29px,
+    #c0392b 30px 30px,
+    #c0392b 31px 31px,
+    #c0392b 32px 32px,
+    #c0392b 33px 33px,
+    #c0392b 34px 34px,
+    #c0392b 35px 35px,
+    #c0392b 36px 36px,
+    #c0392b 37px 37px,
+    #c0392b 38px 38px,
+    #c0392b 39px 39px,
+    #c0392b 40px 40px,
+    #c0392b 41px 41px,
+    #c0392b 42px 42px,
+    #c0392b 43px 43px,
+    #c0392b 44px 44px,
+    #c0392b 45px 45px,
+    #c0392b 46px 46px,
+    #c0392b 47px 47px,
+    #c0392b 48px 48px,
+    #c0392b 49px 49px,
+    #c0392b 50px 50px,
+    #c0392b 51px 51px,
+    #c0392b 52px 52px,
+    #c0392b 53px 53px,
+    #c0392b 54px 54px,
+    #c0392b 55px 55px,
+    #c0392b 56px 56px,
+    #c0392b 57px 57px,
+    #c0392b 58px 58px,
+    #c0392b 59px 59px,
+    #c0392b 60px 60px,
+    #c0392b 61px 61px,
+    #c0392b 62px 62px,
+    #c0392b 63px 63px,
+    #c0392b 64px 64px,
+    #c0392b 65px 65px,
+    #c0392b 66px 66px,
+    #c0392b 67px 67px,
+    #c0392b 68px 68px,
+    #c0392b 69px 69px,
+    #c0392b 70px 70px,
+    #c0392b 71px 71px,
+    #c0392b 72px 72px,
+    #c0392b 73px 73px,
+    #c0392b 74px 74px,
+    #c0392b 75px 75px,
+    #c0392b 76px 76px,
+    #c0392b 77px 77px,
+    #c0392b 78px 78px,
+    #c0392b 79px 79px,
+    #c0392b 80px 80px,
+    #c0392b 81px 81px,
+    #c0392b 82px 82px,
+    #c0392b 83px 83px,
+    #c0392b 84px 84px,
+    #c0392b 85px 85px,
+    #c0392b 86px 86px,
+    #c0392b 87px 87px,
+    #c0392b 88px 88px,
+    #c0392b 89px 89px,
+    #c0392b 90px 90px,
+    #c0392b 91px 91px,
+    #c0392b 92px 92px,
+    #c0392b 93px 93px,
+    #c0392b 94px 94px,
+    #c0392b 95px 95px,
+    #c0392b 96px 96px,
+    #c0392b 97px 97px,
+    #c0392b 98px 98px,
+    #c0392b 99px 99px,
+    #c0392b 100px 100px;
+}
+
 .rect{
 	height: 150px;
 }
@@ -763,6 +996,14 @@ hr.fancy-line, hr.fancy-line:before {
 
 .ColorBG-flip{
     background-image: url("../file/background/BG-Filp.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.ColorBG-bottom{
+    background-image: url("../file/background/BottomBG.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -793,6 +1034,12 @@ hr.fancy-line, hr.fancy-line:before {
     border-bottom: 5px solid rgba(41, 128, 185,0.2);
 }
 
+.blue-text-shadow{
+    text-shadow:    rgba(41, 128, 185,1) 1px 1px,
+                    rgba(41, 128, 185,1) 2px 2px,
+                    rgba(41, 128, 185,1) 3px 3px;
+}
+
 .green-box{
     background-color: rgba(46, 204, 113,1);
     border-bottom: 5px solid rgba(39, 174, 96,1);
@@ -803,6 +1050,12 @@ hr.fancy-line, hr.fancy-line:before {
     border-bottom: 5px solid rgba(39, 174, 96,0.2);
 }
 
+.green-text-shadow{
+    text-shadow:    rgba(39, 174, 96,1) 1px 1px,
+                    rgba(39, 174, 96,1) 2px 2px,
+                    rgba(39, 174, 96,1) 3px 3px;
+}
+
 .yellow-box{
     background-color: rgba(241, 196, 15, 1);
     border-bottom: 5px solid rgba(243, 156, 18, 1);
@@ -811,4 +1064,26 @@ hr.fancy-line, hr.fancy-line:before {
 .yellow-box-alpha{
     background-color: rgba(241, 196, 15, 0.2);
     border-bottom: 5px solid rgba(243, 156, 18, 0.2);
+}
+
+.yellow-text-shadow{
+    text-shadow:    rgba(243, 156, 18, 1) 1px 1px,
+                    rgba(243, 156, 18, 1) 2px 2px,
+                    rgba(243, 156, 18, 1) 3px 3px;
+}
+
+.red-box{
+    background-color: rgba(231, 76, 60, 1);
+    border-bottom: 5px solid rgba(192, 57, 43, 1);
+}
+
+.red-box-alpha{
+    background-color: rgba(231, 76, 60, 0.2);
+    border-bottom: 5px solid rgba(192, 57, 43, 0.2);
+}
+
+.red-text-shadow{
+    text-shadow:    rgba(192, 57, 43, 1) 1px 1px,
+                    rgba(192, 57, 43, 1) 2px 2px,
+                    rgba(192, 57, 43, 1) 3px 3px;
 }

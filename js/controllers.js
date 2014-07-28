@@ -134,6 +134,7 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('GameSixtyCtrl', function($scope, $stateParams, $rootScope, Words, $timeout, $location){
  	$timeout.cancel($rootScope.stopwatch);
+ 	$scope.color = '#3795F2';
  	var countup = function(){
  		$rootScope.stopwatch = $timeout(function(){
  			if($rootScope.counttime > 600){
@@ -143,6 +144,16 @@ angular.module('starter.controllers', ['ionic'])
  				$rootScope.counttime ++;
  				countup();
  				$scope.second = parseInt(60-$rootScope.counttime/10);
+ 			}
+
+
+ 			if($rootScope.counttime > 500){
+ 				$('#progressbar').css({
+ 					'color': 'red',
+ 					'border-color': 'red'
+ 				});
+
+ 				$scope.color = 'red';
  			}
  		}, 100);
  	};

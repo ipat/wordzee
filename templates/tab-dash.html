@@ -2,10 +2,10 @@
   <ion-content class="has-header" >
     <div class="clear"></div>
     <!-- ====================== Free Mode Hightscore Display ======================== -->
-    <div class="green-box title-text thin-font height-75 align-center float-left" style="width:10%;">
+    <div class="green-box title-text thin-font height-75 align-center float-left green-text-shadow" style="width:10%;">
       <i class="ion-trophy"></i>
     </div>
-    <div class="green-box title-text thin-font height-75 align-left float-left" style="width:65%; ">
+    <div class="green-box title-text thin-font height-75 align-left float-left green-text-shadow" style="width:65%; font-size:1.5em">
       Free Mode Highscore
     </div>
 
@@ -32,10 +32,10 @@
 
     <!-- ============================= 60 secs Mode Highscore Display =============================== -->
 
-    <div class="blue-box title-text thin-font height-75 align-center float-left" style="width:10%;">
+    <div class="blue-box title-text thin-font height-75 align-center float-left blue-text-shadow" style="width:10%;">
       <i class="ion-ribbon-a"></i>
     </div>
-    <div class="blue-box title-text thin-font height-75 align-left float-left" style="width:65%;">
+    <div class="blue-box title-text thin-font height-75 align-left float-left blue-text-shadow" style="width:65%; font-size:1.5em">
       60 secs Mode Highscore
     </div>
 
@@ -61,23 +61,23 @@
 
     <!-- ============================= Suggested Word =============================== -->
 
-    <div  ng-show="word" class="yellow-box title-text thin-font height-75 align-left float-left" style="width:10%; border:none;">
+    <div  ng-show="word" class="yellow-box title-text thin-font height-75 align-center float-left yellow-text-shadow" style="width:10%; border:none;">
       <i class="ion-radio-waves"></i>
     </div>
-    <div  ng-show="word" class="yellow-box title-text thin-font height-75 align-left float-left" style="width:90%; border:none;">
+    <div  ng-show="word" class="yellow-box title-text thin-font height-75 align-left float-left yellow-text-shadow" style="width:90%; border:none;">
       Suggested Word
     </div>
-
-    <div ng-show="word" class="yellow-box medium-text thin-font height-75 align-center float-left icon-shadow-yellow" style="width:50%;">
+    
+    <div ng-show="word" class="yellow-box title-text thin-font height-75 align-center float-left icon-shadow-yellow" style="width:50%;">
       {{word | uppercase}}
     </div>
 
-    <div ng-show="word" class="yellow-box-alpha title-text  height-75 align-center float-right" style="width:50%; color:black; font-size:1.7em;   padding:0; font-size:2.2em; border-top: 5px solid rgba(243, 156, 18, 1);">
+    <div ng-show="word" class="yellow-box-alpha title-text  height-75 align-center float-right" style="width:50%; color:black; font-size:1.5em;   padding:0; border-top: 5px solid rgba(243, 156, 18, 1);">
       {{meaning}}
     </div>
+    
     <div class="clear"></div>
     <!-- ============================= End Suggested Word =============================== -->
-
   
 
   </ion-content>
