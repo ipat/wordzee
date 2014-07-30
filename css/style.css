@@ -530,6 +530,11 @@
    box-shadow:          0 0 10px #000000;*/
 }
 
+.yellow-square{
+    background-color: #f1c40f;
+    border-bottom: 5px solid #f39c12;
+}
+
 .on-left{
 	left: 1em;
 	text-align: left;
