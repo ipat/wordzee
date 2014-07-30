@@ -1000,19 +1000,19 @@
 }
 
 .ColorBG{
-	background-image: url("../file/background/bg.jpg");
+	background-image: url("../file/Background/BG.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
 
 .ColorBG-two{
-    background-image: url("../file/background/BG-two.jpg");
+    background-image: url("../file/Background/BG-two.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .ColorBG-flip{
-    background-image: url("../file/background/BG-Filp.jpg");
+    background-image: url("../file/Background/BG-Filp.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -1020,7 +1020,7 @@
 
 
 .ColorBG-bottom{
-    background-image: url("../file/background/BottomBG.jpg");
+    background-image: url("../file/Background/BottomBG.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }

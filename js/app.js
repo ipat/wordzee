@@ -118,6 +118,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('tab.game-working', {
+      url: '/game/working',
+      views: {
+        'tab-game': {
+          templateUrl: 'templates/game-working.html',
+          controller: 'WorkingCtrl'
+        }
+      }
+    })
+
     .state('tab.game-answer', {
       url: '/game/answer/:ans',
       views: {

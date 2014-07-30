@@ -53,6 +53,10 @@ angular.module('starter.controllers', ['ionic'])
 	
 })
 
+.controller('WorkingCtrl', function($scope) {
+	
+})
+
 .controller('WordsCtrl', function($scope, Words) {
 	$scope.search = "";
   	$scope.clearSearch = function(){
